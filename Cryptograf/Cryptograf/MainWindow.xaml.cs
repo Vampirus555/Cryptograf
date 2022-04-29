@@ -33,6 +33,7 @@ namespace Cryptograf
         {
             InitializeComponent();
             N = characters.Length;
+            
         }
 
 
@@ -104,40 +105,44 @@ namespace Cryptograf
         private OpenFileDialog openFileDialog1;
         private void ButtonDecipher_Click(object sender, EventArgs e)
         {
-            
-            string s;
-            openFileDialog1 = new OpenFileDialog();
-            try
+            if (textBox1.Text.Length > 0)
             {
-                openFileDialog1.ShowDialog();
-                StreamReader sr = new StreamReader(openFileDialog1.FileName, Encoding.GetEncoding(1251));
-
-                StreamWriter sw;
-
-                SaveFileDialog SFD = new SaveFileDialog();
-
-                SFD.FileName = "Out";
-                SFD.Filter = "TXT (*.txt)|*.txt";
-
+                string s;
+                openFileDialog1 = new OpenFileDialog();
                 try
                 {
-                    SFD.ShowDialog();
-                    sw = new StreamWriter(SFD.FileName, false, Encoding.GetEncoding(1251));
+                    openFileDialog1.ShowDialog();
+                    StreamReader sr = new StreamReader(openFileDialog1.FileName, Encoding.GetEncoding(1251));
 
-                    while (!sr.EndOfStream)
+                    StreamWriter sw;
+
+                    SaveFileDialog SFD = new SaveFileDialog();
+
+                    SFD.FileName = "Out";
+                    SFD.Filter = "TXT (*.txt)|*.txt";
+
+                    try
                     {
-                        s = sr.ReadLine();
-                        sw.WriteLine(Decode(s, textBox1.Text));
-                        textBox2.Text = Decode(s, textBox1.Text);
-                    }
+                        SFD.ShowDialog();
+                        sw = new StreamWriter(SFD.FileName, false, Encoding.GetEncoding(1251));
 
-                    sr.Close();
-                    sw.Close();
+                        while (!sr.EndOfStream)
+                        {
+                            s = sr.ReadLine();
+                            sw.WriteLine(Decode(s, textBox1.Text));
+                            textBox2.Text = Decode(s, textBox1.Text);
+                        }
+
+                        sr.Close();
+                        sw.Close();
+                    }
+                    catch (Exception ex) { }
                 }
                 catch (Exception ex) { }
+
             }
-            catch (Exception ex) { }
- 
+            else
+                MessageBox.Show("Введите ключевое слово!");
         }
 
 
@@ -149,38 +154,43 @@ namespace Cryptograf
         //Нажать: Зашифровать файл
         private void ButtonEncoder_Click(object sender, EventArgs e)
         {
-
-            string s;
-            openFileDialog1 = new OpenFileDialog();
-            try
+            if (textBox1.Text.Length > 0)
             {
-                openFileDialog1.ShowDialog();
-                StreamReader sr = new StreamReader(openFileDialog1.FileName);
-
-                StreamWriter sw;
-
-                SaveFileDialog SFD = new SaveFileDialog();
-
-                SFD.FileName = "Out";
-                SFD.Filter = "TXT (*.txt)|*.txt";
-
+                string s;
+                openFileDialog1 = new OpenFileDialog();
                 try
                 {
-                    SFD.ShowDialog();
-                    sw = new StreamWriter(SFD.FileName);
+                    openFileDialog1.ShowDialog();
+                    StreamReader sr = new StreamReader(openFileDialog1.FileName);
 
-                    while (!sr.EndOfStream)
+                    StreamWriter sw;
+
+                    SaveFileDialog SFD = new SaveFileDialog();
+
+                    SFD.FileName = "Out";
+                    SFD.Filter = "TXT (*.txt)|*.txt";
+
+                    try
                     {
-                        s = sr.ReadLine();
-                        sw.WriteLine(Encode(s, textBox1.Text));
-                    }
+                        SFD.ShowDialog();
+                        sw = new StreamWriter(SFD.FileName);
 
-                    sr.Close();
-                    sw.Close();
+                        while (!sr.EndOfStream)
+                        {
+                            s = sr.ReadLine();
+                            sw.WriteLine(Encode(s, textBox1.Text));
+                        }
+
+                        sr.Close();
+                        sw.Close();
+                    }
+                    catch (Exception ex) { }
                 }
                 catch (Exception ex) { }
             }
-            catch (Exception ex) { }
+            else
+                MessageBox.Show("Введите ключевое слово!");
+
 
         }
     }
