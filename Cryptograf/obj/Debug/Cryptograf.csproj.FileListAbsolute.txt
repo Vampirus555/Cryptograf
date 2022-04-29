@@ -1,0 +1,16 @@
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\bin\Debug\Cryptograf.exe.config
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\bin\Debug\Cryptograf.exe
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\bin\Debug\Cryptograf.pdb
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf.csproj.AssemblyReference.cache
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf.csproj.SuggestedBindingRedirects.cache
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\MainWindow.g.cs
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\App.g.cs
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf_MarkupCompile.cache
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf_MarkupCompile.lref
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\MainWindow.baml
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf.g.resources
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf.Properties.Resources.resources
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf.csproj.GenerateResource.cache
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf.csproj.CoreCompileInputs.cache
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf.exe
+D:\Курсы\Лаб_криптография\Cryptograf\Cryptograf\obj\Debug\Cryptograf.pdb
